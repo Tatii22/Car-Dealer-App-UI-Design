@@ -193,7 +193,7 @@ body {
     height: auto;
     max-height: none;
     width: 90%;
-    border-radius: 30px;
+    border-radius: 50px;
   }
 
   .left-panel, .right-panel {
@@ -243,7 +243,7 @@ body {
     flex-direction: column;
     height: auto;
     width: 95%;
-    border-radius: 30px;
+    border-radius: 50px;
     overflow: hidden;
   }
 
