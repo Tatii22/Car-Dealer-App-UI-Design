@@ -4,54 +4,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="css/sign in.css" />
+  <link rel="stylesheet" href="../CSS/sign-in.css" />
   <title>Sign in</title>
 </head>
 
 <body>
   <section class="contents">
-    <div class="content-text">
-      <h1>Get’s started.</h1>
-      <p>Don’t have an account? <a href="#">Sign up</a></p>
+    <div class="left-panel">
+      <img src="../img/img sign in/carro login.png" alt="Carro" class="carro" />
     </div>
-
-    <main>
-      <div class="social">
-        <button class="social-button google">
-          <img src="../img/Logo Google.svg" alt="Google Logo" />
-          Sign in with Google
-        </button>
-
-        <button class="social-button facebook">
-          <img src="../img/Logo Facebook.svg" alt="Facebook Logo" />
-          Sign in with Facebook
-        </button>
+    <div class="right-panel">
+      <div class="content-text">
+        <h1>Get’s started.</h1>
+        <p>Don’t have an account? <a href="#">Sign up</a></p>
       </div>
 
-      <div class="or">
-        <img src="../img/or.svg" alt="Or divider" />
-      </div>
+      <main>
+        <div class="social">
+          <button class="social-button google">
+            <img src="../img/img sign in/Logo Google.svg" alt="Google Logo" />
+            Sign in with Google
+          </button>
 
-      <form class="login">
-        <div class="content-login">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" placeholder="uistore@gmail.com" required />
-
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" placeholder="**********" required />
+          <button class="social-button facebook">
+            <img src="../img/img sign in/Logo Facebook.svg" alt="Facebook Logo" />
+            Sign in with Facebook
+          </button>
         </div>
 
-        <div class="forgot">
-          <div class="check">
-            <input type="checkbox" id="remember-me" name="remember-me" />
-            <label for="remember-me">Remember me</label>
+        <div class="or">
+          <img src="../img/img sign in/or.svg" alt="Or divider" />
+        </div>
+
+        <form class="login">
+          <div class="content-login">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" placeholder="uistore@gmail.com" required />
+
+            <label for="password">Password</label>
+            <div class="password-wrapper">
+              <input type="password" id="password" name="password" placeholder="**********" required />
+              <img src="../img/img sign in/verocultar.svg" alt="ver/ocultar" class="toggle-password" />
+            </div>
           </div>
-          <a href="#">Forgot your password?</a>
-        </div>
 
-        <button type="submit" class="signin-button">Sign in</button>
-      </form>
-    </main>
+          <div class="forgot">
+            <div class="check">
+              <input type="checkbox" id="remember-me" name="remember-me" />
+              <label for="remember-me">Remember me</label>
+            </div>
+            <a href="#">Forgot your password?</a>
+          </div>
+
+          <button type="submit" class="signin-button">Sign in</button>
+        </form>
+      </main>
+    </div>
   </section>
 </body>
 
