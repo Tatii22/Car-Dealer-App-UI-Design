@@ -233,3 +233,56 @@ body {
   }
 }
 
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .contents {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+    border-radius: 30px;
+    overflow: hidden;
+  }
+
+  .left-panel {
+    width: 100%;
+    height: 200px;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .left-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .right-panel {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .social {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .social-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .signin-button {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .forgot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
