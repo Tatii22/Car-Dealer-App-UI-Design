@@ -4,9 +4,11 @@
   box-sizing: border-box;
 }
 
+
 body {
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(to bottom, #f4f0f4, #c189bd, #783182, #451054);
+  background-attachment: fixed;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -184,3 +186,50 @@ body {
   font-size: 14px;
   font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .contents {
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+    width: 90%;
+    border-radius: 30px;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .left-panel {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0;
+  }
+
+  .right-panel {
+    padding: 30px 25px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .content-text h1 {
+    font-size: 28px;
+  }
+
+  .content-text p {
+    font-size: 12px;
+  }
+
+  .social-button {
+    padding: 6px 55px;
+    font-size: 14px;
+  }
+
+  .signin-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
