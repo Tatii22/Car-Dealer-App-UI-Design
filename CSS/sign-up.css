@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  height: 100%;
+  background: linear-gradient(to bottom, #f4f0f4, #c189bd, #783182, #451054);
+  background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contents {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  max-width: 1000px;
+  height: 550px;
+  background: white;
+  border-radius: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.left-panel {
+  width: 50%;
+  height: 100%;
+  border-top-left-radius: 40px;
+  border-bottom-left-radius: 40px;
+  overflow: hidden;
+}
+
+.left-panel img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.carro {
+  border-radius: 42px;
+}
+
+.right-panel {
+  width: 50%;
+  padding: 8px 40px;
+  display: flex;
+  flex-direction: column;
+
+}
+
+.content-text {
+  margin-bottom: 20px;
+}
+
+.content-text h1 {
+  font-size: 36px;
+  color: #3a0b46;
+  margin-bottom: 10px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.content-text p {
+  font-size: 13px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.content-text p a {
+  color: #783182;
+  text-decoration: none;
+}
+
+.social {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social-button {
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  padding: 5px 25px;
+  background: #f4f0f4;
+  text-align: center;
+  box-shadow: 2px 2px 5px 0px rgba(8, 2, 12, 0.5);
+  border: none;
+  cursor: pointer;
+
+}
+
+.social-button.google {
+  background: #67217a;
+  color: white;
+}
+
+.social-button.facebook {
+  background: #dbacdf;
+  color: rgb(1, 1, 1);
+}
+
+.social-button img {
+  margin-right: 6px;
+}
+
+.or img {
+  align-items: center;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.content-login {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.content-login label {
+  font-size: 16px;
+  color: #3a0b46;
+  font-weight: bold;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.content-login input {
+  padding: 10px;
+  background-color: #eddfec;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 13px;
+}
+
+.password-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding-right: 40px;
+}
+
+/* Ojito */
+.password-wrapper .toggle-password {
+  position: absolute;
+  right: 10px;
+  cursor: pointer;
+  width: 18px;
+  opacity: 0.6;
+}
+
+.password-wrapper .toggle-password:hover {
+  opacity: 1;
+}
+
+.forgot {
+  display: flex;
+  justify-content: space-between;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  color: #7e7c7e;
+  margin-bottom: 20px;
+}
+
+.check {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.forgot a {
+  color: #783182;
+  text-decoration: none;
+}
+.signin-button {
+  background-color: #27052b;
+  color: white;
+  padding: 11px 110px;
+  width: 100%;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+@media (max-width: 1024px) and (min-width: 768px) {
+  .contents {
+    flex-direction: column;
+    height: auto;
+    max-height: none;
+    width: 90%;
+    border-radius: 50px;
+  }
+
+  .left-panel, .right-panel {
+    width: 100%;
+    height: auto;
+    border-radius: 0;
+  }
+
+  .left-panel {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    border-bottom-left-radius: 0;
+  }
+
+  .right-panel {
+    padding: 30px 25px;
+    border-bottom-left-radius: 30px;
+    border-bottom-right-radius: 30px;
+  }
+
+  .content-text h1 {
+    font-size: 28px;
+  }
+
+  .content-text p {
+    font-size: 12px;
+  }
+
+  .social-button {
+    padding: 6px 55px;
+    font-size: 14px;
+  }
+
+  .signin-button {
+    padding: 10px;
+    font-size: 14px;
+  }
+}
+
+@media (max-width: 768px) {
+  body {
+    align-items: flex-start;
+    padding: 20px;
+  }
+
+  .contents {
+    flex-direction: column;
+    height: auto;
+    width: 95%;
+    border-radius: 50px;
+    overflow: hidden;
+  }
+
+  .left-panel {
+    width: 100%;
+    height: 200px;
+    border-radius: 30px 30px 0 0;
+  }
+
+  .left-panel img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .right-panel {
+    width: 100%;
+    padding: 30px 20px;
+  }
+
+  .social {
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+  }
+
+  .social-button {
+    width: 100%;
+    justify-content: center;
+  }
+
+  .signin-button {
+    padding: 12px;
+    font-size: 16px;
+  }
+
+  .forgot {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+  }
+}
