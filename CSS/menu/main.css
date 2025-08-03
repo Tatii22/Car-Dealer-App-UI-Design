@@ -1,0 +1,163 @@
+.parent {
+  display: grid;
+  grid-template-columns: 60px auto;
+  grid-template-rows: 80px auto auto auto;
+  gap: 24px;
+  width: 100%;
+  height: 100vh;
+  transition: grid-template-columns 0.3s ease;
+  position: relative;
+}
+.parent:has(.sidebar:hover) {
+  grid-template-columns: 248px 1fr;
+}
+.parent:has(.sidebar:hover) > :not(.div7) {
+  margin-left: 10px;
+  transition: margin 0.3s ease;
+}
+
+
+.div7 {
+  grid-row: 1 / span 4;
+  grid-column: 1;
+  background-color: transparent;
+}
+.sidebar {
+  height: 100%;
+  background: linear-gradient(to bottom, #f4f0f4, #c189bd, #783182, #451054);
+  color: white;
+  overflow: hidden;
+  transition: width 0.3s ease;
+  width: 60px;
+}
+.sidebar:hover {
+  width: 248px;
+}
+.sidebar___list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+|
+.sidebar:hover .label {
+  opacity: 1;
+}
+.sidebar__element {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  font-size: 16px;
+  color: black;
+}
+
+.sidebar__element img {
+  margin-right: 10px;
+  width: 24px;
+  height: 24px;
+}
+
+.sidebar__element p,
+.footer p {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  white-space: nowrap;
+  padding: 10px;
+}
+
+.sidebar__icon--logo {
+  width: 32px;
+}
+.label {
+  opacity: 100;
+  transition: opacity 0.3s ease;
+}
+
+
+
+
+.div8 {
+  grid-column: 2;
+  grid-row: 1;
+  background-color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 20px;
+}
+
+.div11 {
+  grid-column: 2;
+  grid-row: 2;
+  background-color: blue;
+}
+
+
+
+
+
+.company-name {
+    font-size: 18px;
+    font-weight: bold;
+}
+@media (max-width: 1366px) {
+  .parent {
+    width: 100%;
+    height: auto;
+  }
+}
+.div12 {
+    grid-column-start: 3;
+    grid-row-start: 2;
+    background-color: crimson;
+}
+.div13 {
+    grid-column-start: 4;
+    grid-row-start: 2;
+    background-color: green;
+}
+.div14 {
+    grid-column-start: 5;
+    grid-row-start: 2;
+    background-color: yellow;
+}
+.div23 {
+    grid-column: span 4 / span 4;
+    grid-column-start: 2;
+    grid-row-start: 3;
+    background-color: rgb(255, 187, 0);
+}
+.div24 {
+    grid-column: span 4 / span 4;
+    grid-column-start: 2;
+    grid-row-start: 4;
+    background-color: aqua
+}
+
+
+
+
+
+
+
+.footer {
+  margin-top: auto;
+  font-size: 14px;
+  opacity: 0.7;
+}
+
+
+
+
+
+
+
+.div11,
+.div23,
+.div24 {
+  grid-column: 2;
+  transition: margin 0.3s ease;
+}
+
+
+
