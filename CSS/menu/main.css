@@ -21,6 +21,8 @@
     body {
       font-family: sans-serif;
       background: #f7f7f7;
+      width: auto;
+      height: auto;
     }
 
     .layout {
@@ -34,6 +36,7 @@
       height: 100vh;
       width: var(--sidebar-collapsed);
       background: linear-gradient(to bottom, #f4f0f4, #c189bd, #783182, #451054);
+
       overflow: hidden;
       transition: width 0.3s ease;
       display: flex;
@@ -110,7 +113,7 @@
 
     header.topbar {
       height: var(--topbar-height);
-      background: white;
+      background:  linear-gradient(to bottom, #f4f0f4, #fdfdfd, #783182, #451054);
       display: flex;
       align-items: center;
       justify-content: center;
@@ -193,6 +196,10 @@
 
     .brand-card:hover {
       box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      
+    }
+    .brand-marquee:hover {
+  animation-play-state: paused;
     }
 
     .brand-card button {
@@ -203,39 +210,56 @@
       cursor: pointer;
     }
 
-    .cars {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      padding: 20px;
-      justify-content: center;
-    }
+.cars {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 20px;
+  justify-items: center;
+}
 
-    .car-card {
-      width: var(--card-width);
-      height: var(--card-height);
-      background: white;
-      border-radius: 10px;
-      padding: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      transition: box-shadow 0.3s;
-    }
 
-    .car-card:hover {
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    }
+.car-card {
+  width: clamp(318px, 22vw, 420px); 
+  height: clamp(236px, 16vw, 300px); 
+  background: white;
+  border-radius: 10px;
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: box-shadow 0.3s, transform 0.3s;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
 
-    .car-card img {
-      max-width: 100%;
-      height: auto;
-    }
 
-    .car-info {
-      display: flex;
-      justify-content: space-between;
-    }
+
+.car-card:hover {
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-3px);
+}
+
+
+.car-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+
+@media (max-width: 950px) {
+  .cars {
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  }
+}
+
+   .car-card .car-info {
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 10px;
+}
 
     .music-player {
       position: fixed;
