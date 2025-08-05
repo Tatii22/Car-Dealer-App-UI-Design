@@ -1,0 +1,360 @@
+ :root {
+     --sidebar-collapsed: 50px;
+     --sidebar-expanded: 248px;
+     --button-height: 34px;
+     --sidebar-padding-top: 35px;
+     --sidebar-footer-gap: 579px;
+     --sidebar-footer-spacing: 24px;
+     --sidebar-content-width: 174px;
+     --topbar-height: 78px;
+     --topbar-container-width: 1029.2px;
+     --card-width: 318px;
+     --card-height: 236px;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: sans-serif;
+     background: #f7f7f7;
+     width: auto;
+     height: auto;
+ }
+
+ .layout {
+     display: flex;
+ }
+
+ .sidebar {
+     position: fixed;
+     left: 0;
+     top: 0;
+     height: 100vh;
+     width: var(--sidebar-collapsed);
+     background: linear-gradient(to bottom, #f4f0f4, #c189bd, #783182, #451054);
+     overflow: hidden;
+     transition: width 0.3s ease;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     z-index: 10;
+ }
+
+ .sidebar:hover {
+     width: var(--sidebar-expanded);
+ }
+
+ .sidebar .logo {
+     display: flex;
+     align-items: center;
+     padding: 20px;
+     width: 100%;
+ }
+
+ .sidebar .logo img {
+     width: 30px;
+ }
+
+ .sidebar .logo span {
+     margin-left: 10px;
+     font-weight: bold;
+ }
+
+ .sidebar:not(:hover) .logo {
+     justify-content: center;
+ }
+
+ .sidebar:hover .logo {
+     justify-content: flex-start;
+ }
+
+ .sidebar button {
+     height: var(--button-height);
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     border: none;
+     background: transparent;
+     font-size: 14px;
+     cursor: pointer;
+     padding-left: 10px;
+     transition: box-shadow 0.2s;
+ }
+
+ .sidebar button:hover {
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ .sidebar:hover~.main-content {
+     margin-left: var(--sidebar-expanded);
+     width: calc(100% - var(--sidebar-expanded));
+ }
+
+ .sidebar button {
+     white-space: nowrap;
+     overflow: hidden;
+     margin-left: 10px;
+     text-overflow: ellipsis;
+     transition: all 0.3s ease;
+     justify-content: flex-start;
+ }
+
+ .sidebar {
+     width: var(--sidebar-collapsed);
+ }
+
+ .sidebar .logo span,
+ .sidebar button span {
+     display: none;
+ }
+
+ .sidebar:hover .logo span,
+ .sidebar:hover button span {
+     display: inline;
+ }
+
+ .menu,
+ .footer {
+     width: var(--sidebar-content-width);
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .menu {
+     margin-top: var(--sidebar-padding-top);
+ }
+
+ .footer {
+     margin-top: auto;
+     margin-bottom: 20px;
+ }
+
+ .main-content {
+     margin-left: var(--sidebar-collapsed);
+     width: calc(100% - var(--sidebar-collapsed));
+     transition: margin-left 0.3s ease;
+ }
+
+ header.topbar {
+     height: var(--topbar-height);
+     background: white;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+     position: sticky;
+     top: 0;
+     z-index: 100;
+ }
+
+ .topbar-container {
+     width: var(--topbar-container-width);
+     /* 1029.2px */
+     display: flex;
+     flex: 1;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .topbar-left {
+     display: flex;
+     align-items: center;
+     gap: 16px;
+     margin-left: 20px;
+ }
+
+ @media (max-width: 768px) {
+     .topbar-container {
+         flex-direction: row;
+         align-items: center;
+     }
+
+     .topbar-left {
+         flex-direction: row;
+         align-items: center;
+         gap: 8px;
+     }
+
+     .profile-btn {
+         align-self: flex-end;
+         margin-top: 10px;
+     }
+ }
+
+ .topbar-left .notification {
+     font-size: 18px;
+ }
+
+ .search-bar {
+     width: 100%;
+     max-width: 358px;
+     height: 46px;
+     border-radius: 8px;
+     background: #f1f1f1;
+     display: flex;
+     align-items: center;
+     padding: 0 12px;
+     margin-left: 44px;
+ }
+
+ .search-bar input {
+     border: none;
+     outline: none;
+     background: transparent;
+     width: 100%;
+ }
+
+ .profile-btn {
+     width: 48px;
+     height: 48px;
+     border-radius: 50%;
+     background: url("/img/top/profile.png") center/cover;
+     border: none;
+     cursor: pointer;
+ }
+
+
+ .brands {
+     padding: 20px;
+     overflow: hidden;
+ }
+
+ .brand-marquee {
+     display: flex;
+     width: 200%;
+     animation: scrollBrands 20s linear infinite;
+     gap: 40px;
+ }
+
+ @keyframes scrollBrands {
+     0% {
+         transform: translateX(0);
+     }
+
+     100% {
+         transform: translateX(-50%);
+     }
+ }
+
+ .brand-card {
+     width: 232px;
+     height: 266px;
+     background: white;
+     border-radius: 10px;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     transition: box-shadow 0.3s;
+ }
+
+ .brand-card:hover {
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+
+ }
+
+ .brand-marquee:hover {
+     animation-play-state: paused;
+ }
+
+ .brand-card button {
+     background: transparent;
+     border: none;
+     width: 100%;
+     height: 100%;
+     cursor: pointer;
+ }
+
+ .cars {
+     display: grid;
+     grid-template-columns: repeat(3, 1fr);
+     gap: 40px;
+     padding: 44px;
+     justify-items: center;
+ }
+
+
+ .car-card {
+     width: clamp(318px, 22vw, 420px);
+     height: clamp(236px, 16vw, 300px);
+     background: white;
+     border-radius: 10px;
+     padding: 1em;
+     display: flex;
+     flex-direction: column;
+     justify-content: space-between;
+     transition: box-shadow 0.3s, transform 0.3s;
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+ }
+
+
+
+ .car-card:hover {
+     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+     transform: translateY(-3px);
+ }
+
+
+ .car-card img {
+
+     border-radius: 8px;
+     object-fit: cover;
+ }
+
+
+ @media (max-width: 950px) {
+     .cars {
+         grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+     }
+ }
+
+ .car-card .car-info {
+     flex-direction: column;
+     align-items: center;
+     text-align: center;
+     gap: 10px;
+ }
+
+ .music-player {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     background: rgba(255, 255, 255, 0.8);
+     border-radius: 10px;
+     padding: 10px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+ }
+
+ .music-player audio {
+     width: 300px;
+ }
+
+.precio{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 100px;
+    
+}
+
+.title-car{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.car-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    justify-content: flex-start;
+    gap: 20px;
+   
+}
