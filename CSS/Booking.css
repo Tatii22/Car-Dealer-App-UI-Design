@@ -221,55 +221,7 @@
  }
 
 
- .brands {
-     padding: 20px;
-     overflow: hidden;
- }
 
- .brand-marquee {
-     display: flex;
-     width: 200%;
-     animation: scrollBrands 20s linear infinite;
-     gap: 40px;
- }
-
- @keyframes scrollBrands {
-     0% {
-         transform: translateX(0);
-     }
-
-     100% {
-         transform: translateX(-50%);
-     }
- }
-
- .brand-card {
-     width: 232px;
-     height: 266px;
-     background: white;
-     border-radius: 10px;
-     display: flex;
-     justify-content: center;
-     align-items: center;
-     transition: box-shadow 0.3s;
- }
-
- .brand-card:hover {
-     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-
- }
-
- .brand-marquee:hover {
-     animation-play-state: paused;
- }
-
- .brand-card button {
-     background: transparent;
-     border: none;
-     width: 100%;
-     height: 100%;
-     cursor: pointer;
- }
 
  .cars {
      display: grid;
@@ -332,15 +284,14 @@
  }
 
  .music-player audio {
-     width: 300px;
+     width: 100px;
  }
 
 .precio{
     display: flex;
     flex-direction: row;
-    justify-content: flex-end;
     align-items: center;
-    gap: 100px;
+    gap: 10px;
     
 }
 
@@ -357,4 +308,10 @@
     justify-content: flex-start;
     gap: 20px;
    
+}
+.car-meta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
 }
