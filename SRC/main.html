@@ -1,154 +1,278 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Caradver</title>
-  <link rel="stylesheet" href="/CSS/menu/main.css">
-   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Caradver</title>
+    <link rel="stylesheet" href="/CSS/menu/main.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <div class="layout">
+      <aside class="sidebar">
+        <div onclick="location.href='main.html'" class="logo">
+          <img src="/img/siderbar/logo.svg" alt="Logo" />
+          <span>caradver</span>
+        </div>
 
-</head>
-<body>
-<div class="layout">
-  <aside class="sidebar">
-    <div onclick="location.href='main.html'" class="logo">
-      <img src="/img/siderbar/logo.svg" alt="Logo">
-      <span>caradver</span>
-    </div>
+        <div class="menu">
+          <button onclick="location.href='main.html'">
+            <i class="fas fa-border-all"></i> <span>Dashboard</span>
+          </button>
+          <button onclick="location.href='assets.html'">
+            <i class="fas fa-car"></i> <span>Assets</span>
+          </button>
+          <button onclick="location.href='Booking.html'">
+            <i class="fas fa-calendar-check"></i> <span>Booking</span>
+          </button>
+          <button onclick="location.href='sellcars.html'">
+            <i class="fas fa-dollar-sign"></i> <span>Sell Cars</span>
+          </button>
+          <button onclick="location.href='service.html'">
+            <i class="fas fa-tools"></i> <span>Services</span>
+          </button>
+        </div>
 
-    <div class="menu">
-      <button onclick="location.href='main.html'"><i class="fas fa-border-all"></i>    <span>Dashboard</span></button>
-      <button onclick="location.href='#'"><i class="fas fa-car"></i>    <span>Assets</span></button>
-      <button onclick="location.href='#'"><i class="fas fa-calendar-check"></i>    <span>Booking</span></button>
-      <button onclick="location.href='#'"><i class="fas fa-dollar-sign"></i>    <span>Sell Cars</span></button>
-      <button onclick="location.href='#'"><i class="fas fa-tools"></i>    <span>Services</span></button>
-    </div>
+        <div class="footer">
+          <button onclick="location.href='settings.html'">
+            <i class="fas fa-cog"></i> <span>Settings</span>
+          </button>
+          <button onclick="location.href='sign in.html'">
+            <i class="fas fa-sign-out-alt"></i> <span>Log out</span>
+          </button>
+        </div>
+      </aside>
 
-    <div class="footer">
-      <button onclick="location.href='settings.html'"><i class="fas fa-cog"></i>    <span>Settings</span></button>
-      <button onclick="location.href='sign in.html'"><i class="fas fa-sign-out-alt"></i>    <span>Log out</span></button>
-    </div>
-  </aside>
-
-  <div class="main-content">
-    <header class="topbar">
-      <div class="topbar-container">
-        <div class="topbar-left">
-          <i class="fas fa-bell notification"></i>
-          <div class="search-bar">
-            <input type="text" placeholder="Search or type..." />
+      <div class="main-content">
+        <header class="topbar">
+          <div class="topbar-container">
+            <div class="topbar-left">
+              <i class="fas fa-bell notification"></i>
+              <div class="search-bar">
+                <input type="text" placeholder="Search or type..." />
+              </div>
+            </div>
+            <button
+              class="profile-btn"
+              onclick="location.href='#perfil'"
+            ></button>
           </div>
-        </div>
-        <button class="profile-btn" onclick="location.href='#perfil'"></button>
-      </div>
-    </header>
+        </header>
 
-    <section class="brands">
-      <div class="brand-marquee">
-         <div class="brand-card">
-          <button onclick="location.href='#lamborghini'">
-            <img src="/img/branchs/Lamborghini.svg" alt="Lamborghini" />
-          </button>
-        </div>
-        <div class="brand-card">
-          <button onclick="location.href='#bmw'">
-            <img src="/img/branchs/BMW.svg" alt="BMW" />
-          </button>
-        </div>
-        <div class="brand-card">
-          <button onclick="location.href='#volvo'">
-            <img src="/img/branchs/Volvo.svg" alt="Volvo" />
-          </button>
-        </div>
-        <div class="brand-card">
-          <button onclick="location.href='#mercedes'">
-            <img src="/img/branchs/Mercedes Benz.svg" alt="Mercedes" />
-          </button>
-        </div>
-        <div class="brand-card">
-          <button onclick="location.href='#lamborghini'">
-            <img src="/img/branchs/Lamborghini.svg" alt="Lamborghini" />
-          </button>
-        </div>
-        <div class="brand-card">
-          <button onclick="location.href='#bmw'">
-            <img src="/img/branchs/BMW.svg" alt="BMW" />
-          </button>
-        </div>
-        <div class="brand-card">
-          <button onclick="location.href='#volvo'">
-            <img src="/img/branchs/Volvo.svg" alt="Volvo" />
-          </button>
-        </div>
-        <div class="brand-card">
-          <button onclick="location.href='#mercedes'">
-            <img src="/img/branchs/Mercedes Benz.svg" alt="Mercedes" />
-          </button>
-        </div>
-      </div>
-    </section>
-    <section class="cars">
-      <div onclick="location.href='sign in.html'" class="car-card">
-        <p>64% Recommend</p>
-        <img src="/img/car-cards/BMW-X1.svg" alt="BMW X1">
-        <div class="car-info">
-          <span>BMW X1</span>
-          <span>$32/h</span>
-        </div>
-      </div>
+        <section class="brands">
+          <div class="brand-marquee">
+            <div class="brand-card">
+              <button onclick="location.href='#lamborghini'">
+                <img src="/img/branchs/Lamborghini.svg" alt="Lamborghini" />
+              </button>
+            </div>
+            <div class="brand-card">
+              <button onclick="location.href='#bmw'">
+                <img src="/img/branchs/BMW.svg" alt="BMW" />
+              </button>
+            </div>
+            <div class="brand-card">
+              <button onclick="location.href='#volvo'">
+                <img src="/img/branchs/Volvo.svg" alt="Volvo" />
+              </button>
+            </div>
+            <div class="brand-card">
+              <button onclick="location.href='#mercedes'">
+                <img src="/img/branchs/Mercedes Benz.svg" alt="Mercedes" />
+              </button>
+            </div>
+            <div class="brand-card">
+              <button onclick="location.href='#lamborghini'">
+                <img src="/img/branchs/Lamborghini.svg" alt="Lamborghini" />
+              </button>
+            </div>
+            <div class="brand-card">
+              <button onclick="location.href='#bmw'">
+                <img src="/img/branchs/BMW.svg" alt="BMW" />
+              </button>
+            </div>
+            <div class="brand-card">
+              <button onclick="location.href='#volvo'">
+                <img src="/img/branchs/Volvo.svg" alt="Volvo" />
+              </button>
+            </div>
+            <div class="brand-card">
+              <button onclick="location.href='#mercedes'">
+                <img src="/img/branchs/Mercedes Benz.svg" alt="Mercedes" />
+              </button>
+            </div>
+          </div>
+        </section>
+        <section class="cars">
+          <div onclick="location.href='assets.html'" class="car-card">
+            <p class="title-car">
+              <img
+                class="img-title"
+                src="/img/car-cards/ICON/shared.svg"
+                alt=""
+              />64% Recommend
+            </p>
+            <img src="/img/car-cards/BMW-X1.svg" alt="BMW-X1.svg" />
+            <div class="car-info">
+              <span><strong>BMW-X1</strong></span
+              ><br />
+              <div class="car-meta">
+                <span class="car-left">
+                  <img src="/img/car-cards/ICON/icon.svg" alt="icon" />132K
+                  <img src="/img/car-cards/ICON/settings.svg" alt="icon" /><img
+                    src="/img/car-cards/ICON/rayo.svg"
+                    alt="icon"
+                  />
+                </span>
+                <span class="precio">$32/h</span>
+              </div>
+            </div>
+          </div>
 
-      <div onclick="location.href='sign in.html'" class="car-card">
-        <p>94% Recommend</p>
-        <img src="/img/car-cards/Lamborghini Urus.png" alt="Lamborghini Urus">
-        <div class="car-info">
-          <span>Lamborghini Urus</span>
-          <span>$42/h</span>
-        </div>
-      </div>
+          <div onclick="location.href='inserta la ref'" class="car-card">
+            <p class="title-car">
+              <img
+                class="img-title"
+                src="/img/car-cards/ICON/shared.svg"
+                alt=""
+              />94% Recommend
+            </p>
+            <img
+              src="/img/car-cards/Lamborghini Urus.png"
+              alt="Lamborghini Urus.png"
+            />
+            <div class="car-info">
+              <span><strong>Lamborghini Urus</strong></span
+              ><br />
+              <div class="car-meta">
+                <span class="car-left">
+                  <img src="/img/car-cards/ICON/icon.svg" alt="icon" />232K
+                  <img src="/img/car-cards/ICON/settings.svg" alt="icon" /><img
+                    src="/img/car-cards/ICON/rayo.svg"
+                    alt="icon"
+                  />
+                </span>
+                <span class="precio">$42/h</span>
+              </div>
+            </div>
+          </div>
 
-      <div onclick="location.href='sign in.html'" class="car-card">
-        <p>89% Recommend</p>
-        <img src="/img/car-cards/Volvo XC90.png" alt="Volvo XC90">
-        <div class="car-info">
-          <span>Volvo XC90</span>
-          <span>$55/h</span>
-        </div>
-      </div>
+          <div onclick="location.href='inserta la ref'" class="car-card">
+            <p class="title-car">
+              <img
+                class="img-title"
+                src="/img/car-cards/ICON/shared.svg"
+                alt=""
+              />89% Recommend
+            </p>
+            <img src="/img/car-cards/Volvo XC90.png" alt="Volvo XC90.png" />
+            <div class="car-info">
+              <span><strong>Volvo XC90</strong></span
+              ><br />
+              <div class="car-meta">
+                <span class="car-left">
+                  <img src="/img/car-cards/ICON/icon.svg" alt="icon" />532K
+                  <img src="/img/car-cards/ICON/settings.svg" alt="icon" /><img
+                    src="/img/car-cards/ICON/rayo.svg"
+                    alt="icon"
+                  />
+                </span>
+                <span class="precio">$55/h</span>
+              </div>
+            </div>
+          </div>
 
-      <div onclick="location.href='sign in.html'" class="car-card">
-        <p>56% Recommend</p>
-        <img src="/img/car-cards/Jeep Rubicon.png" alt="Jeep Rubicon">
-        <div class="car-info">
-          <span>Jeep Rubicon</span>
-          <span>$29/h</span>
-        </div>
-      </div>
+          <div onclick="location.href='inserta la ref'" class="car-card">
+            <p class="title-car">
+              <img
+                class="img-title"
+                src="/img/car-cards/ICON/shared.svg"
+                alt=""
+              />56% Recommend
+            </p>
+            <img src="/img/car-cards/Jeep Rubicon.png" alt="Jeep Rubicon" />
+            <div class="car-info">
+              <span><strong>Jeep Rubicon</strong></span
+              ><br />
+              <div class="car-meta">
+                <span class="car-left">
+                  <img src="/img/car-cards/ICON/icon.svg" alt="icon" />350K
+                  <img src="/img/car-cards/ICON/settings.svg" alt="icon" /><img
+                    src="/img/car-cards/ICON/rayo.svg"
+                    alt="icon"
+                  />
+                </span>
+                <span class="precio">$29/h</span>
+              </div>
+            </div>
+          </div>
 
-      <div onclick="location.href='sign in.html'" class="car-card">
-        <p>69% Recommend</p>
-        <img src="/img/car-cards/Mercedes-Benz AMG G 63.png" alt="Mercedes AMG G 63">
-        <div class="car-info">
-          <span>Mercedes-AMG G 63</span>
-          <span>$26/h</span>
-        </div>
-      </div>
+          <div onclick="location.href='inserta la ref'" class="car-card">
+            <p class="title-car">
+              <img
+                class="img-title"
+                src="/img/car-cards/ICON/shared.svg"
+                alt=""
+              />69% Recommend
+            </p>
+            <img
+              src="/img/car-cards/Mercedes-Benz AMG G 63.png"
+              alt="Mercedes AMG G 63"
+            />
+            <div class="car-info">
+              <span><strong>Mercedes-AMG G 63</strong></span
+              ><br />
+              <div class="car-meta">
+                <span class="car-left">
+                  <img src="/img/car-cards/ICON/icon.svg" alt="icon" />769K
+                  <img src="/img/car-cards/ICON/settings.svg" alt="icon" /><img
+                    src="/img/car-cards/ICON/rayo.svg"
+                    alt="icon"
+                  />
+                </span>
+                <span class="precio">$26/h</span>
+              </div>
+            </div>
+          </div>
 
-      <div onclick="location.href='sign in.html'" class="car-card">
-        <p>75% Recommend</p>
-        <img src="/img/car-cards/Porsche 911.png" alt="Porsche 911 GT3 RS">
-        <div class="car-info">
-          <span>Porsche 911 GT3 RS</span>
-          <span>$15/h</span>
-        </div>
+          <div onclick="location.href='inserta la ref'" class="car-card">
+            <p class="title-car">
+              <img
+                class="img-title"
+                src="/img/car-cards/ICON/shared.svg"
+                alt=""
+              />75% Recommend
+            </p>
+            <img src="/img/car-cards/Porsche 911.png" alt="Porsche" />
+            <div class="car-info">
+              <span><strong>Porsche 911 GT3 RS</strong></span
+              ><br />
+              <div class="car-meta">
+                <span class="car-left">
+                  <img src="/img/car-cards/ICON/icon.svg" alt="icon" />852K
+                  <img src="/img/car-cards/ICON/settings.svg" alt="icon" /><img
+                    src="/img/car-cards/ICON/rayo.svg"
+                    alt="icon"
+                  />
+                </span>
+                <span class="precio">$15/h</span>
+              </div>
+            </div>
+          </div>
+        </section>
       </div>
-    </section>
-  </div>
-</div>
-<div class="music-player">
-  <audio autoplay loop controls>
-    <source src="/Sounds/Yofukashi no Uta Season 2 Opening Full _ Mirage - Sub. Español ♡.mp3" type="audio/mp3" />
-    Tu navegador no soporta audio HTML5.
-  </audio>
-</div>
-</body>
+    </div>
+    <div class="music-player">
+      <audio autoplay loop controls>
+        <source
+          src="/Sounds/Yofukashi no Uta Season 2 Opening Full _ Mirage - Sub. Español ♡.mp3"
+          type="audio/mp3"
+        />
+        Tu navegador no soporta audio HTML5.
+      </audio>
+    </div>
+  </body>
 </html>

@@ -1,0 +1,581 @@
+ :root {
+     --sidebar-collapsed: 50px;
+     --sidebar-expanded: 248px;
+     --button-height: 34px;
+     --sidebar-padding-top: 35px;
+     --sidebar-footer-gap: 579px;
+     --sidebar-footer-spacing: 24px;
+     --sidebar-content-width: 174px;
+     --topbar-height: 78px;
+     --topbar-container-width: 1029.2px;
+     --card-width: 318px;
+     --card-height: 236px;
+ }
+
+ * {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+ }
+
+ body {
+     font-family: sans-serif;
+     background: #f7f7f7;
+     width: auto;
+     height: auto;
+ }
+
+ .layout {
+     display: flex;
+ }
+
+ .sidebar {
+     position: fixed;
+     left: 0;
+     top: 0;
+     height: 100vh;
+     width: var(--sidebar-collapsed);
+     background: linear-gradient(to bottom, #f4f0f4, #c189bd, #783182, #451054);
+     overflow: hidden;
+     transition: width 0.3s ease;
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+     z-index: 10;
+ }
+
+ .sidebar:hover {
+     width: var(--sidebar-expanded);
+ }
+
+ .sidebar .logo {
+     display: flex;
+     align-items: center;
+     padding: 20px;
+     width: 100%;
+ }
+
+ .sidebar .logo img {
+     width: 30px;
+ }
+
+ .sidebar .logo span {
+     margin-left: 10px;
+     font-weight: bold;
+ }
+
+ .sidebar:not(:hover) .logo {
+     justify-content: center;
+ }
+
+ .sidebar:hover .logo {
+     justify-content: flex-start;
+ }
+
+ .sidebar button {
+     height: var(--button-height);
+     display: flex;
+     align-items: center;
+     gap: 10px;
+     border: none;
+     background: transparent;
+     font-size: 14px;
+     cursor: pointer;
+     padding-left: 10px;
+     transition: box-shadow 0.2s;
+ }
+
+ .sidebar button:hover {
+     box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+ }
+
+ .sidebar:hover~.main-content {
+     margin-left: var(--sidebar-expanded);
+     width: calc(100% - var(--sidebar-expanded));
+ }
+
+ .sidebar button {
+     white-space: nowrap;
+     overflow: hidden;
+     margin-left: 10px;
+     text-overflow: ellipsis;
+     transition: all 0.3s ease;
+     justify-content: flex-start;
+ }
+
+ .sidebar {
+     width: var(--sidebar-collapsed);
+ }
+
+ .sidebar .logo span,
+ .sidebar button span {
+     display: none;
+ }
+
+ .sidebar:hover .logo span,
+ .sidebar:hover button span {
+     display: inline;
+ }
+ 
+
+ .menu,
+ .footer {
+     width: var(--sidebar-content-width);
+     display: flex;
+     flex-direction: column;
+     gap: 10px;
+     margin-left: auto;
+     margin-right: auto;
+ }
+
+ .menu {
+     margin-top: var(--sidebar-padding-top);
+ }
+
+ .footer {
+     margin-top: auto;
+     margin-bottom: 20px;
+ }
+
+ .main-content {
+     margin-left: var(--sidebar-collapsed);
+     width: calc(100% - var(--sidebar-collapsed));
+     transition: margin-left 0.3s ease;
+ }
+
+ header.topbar {
+     height: var(--topbar-height);
+     background: white;
+     display: flex;
+     align-items: center;
+     justify-content: space-between;
+     box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+     position: sticky;
+     top: 0;
+     z-index: 100;
+ }
+
+ .topbar-container {
+     width: var(--topbar-container-width);
+     /* 1029.2px */
+     display: flex;
+     flex: 1;
+     justify-content: space-between;
+     align-items: center;
+ }
+
+ .topbar-left {
+     display: flex;
+     align-items: center;
+     gap: 16px;
+     margin-left: 20px;
+ }
+
+ @media (max-width: 768px) {
+     .topbar-container {
+         flex-direction: row;
+         align-items: center;
+     }
+
+     .topbar-left {
+         flex-direction: row;
+         align-items: center;
+         gap: 8px;
+     }
+
+     .profile-btn {
+         align-self: flex-end;
+         margin-top: 10px;
+     }
+ }
+
+ .topbar-left .notification {
+     font-size: 18px;
+ }
+
+ .search-bar {
+     width: 100%;
+     max-width: 358px;
+     height: 46px;
+     border-radius: 8px;
+     background: #f1f1f1;
+     display: flex;
+     align-items: center;
+     padding: 0 12px;
+     margin-left: 44px;
+ }
+
+ .search-bar input {
+     border: none;
+     outline: none;
+     background: transparent;
+     width: 100%;
+ }
+
+ .profile-btn {
+     width: 48px;
+     height: 48px;
+     border-radius: 50%;
+     background: url("/img/top/profile.png") center/cover;
+     border: none;
+     cursor: pointer;
+ }
+
+
+/* Columna izquierda (contenido principal) */
+.cars-containt {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    max-width: 100%;
+}
+
+ .cars {
+     display: grid;
+     grid-template-columns: repeat(10, 1fr);
+     gap: 10px;
+     justify-items: center;
+      width: clamp(10%, 22vw, 590px);
+     height: clamp(50%, 16vw, 156px);
+ }
+
+
+
+ .car-card {
+     width: 50px;
+     height: 70px;
+     background: white;
+     border-radius: 10px;
+     padding: 1em;
+     display: flex;
+     flex-direction: row;
+     align-items: center;
+     text-align: center;
+     justify-content: center;
+     transition: box-shadow 0.3s, transform 0.3s;
+     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+ }
+
+
+
+ .car-card:hover {
+     box-shadow: 0 0 12px rgba(0, 0, 0, 0.2);
+     transform: translateY(-3px);
+ }
+
+
+
+ @media (max-width: 950px) {
+     .cars {
+        grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+        width: 100%;
+        height: auto;
+        gap: 10px;
+        padding: 0 10px;
+     }
+     .car-card {
+        width: 100%;
+        max-width: 80px;
+        height: 70px;
+        font-size: 12px;
+        padding: 0.5em;
+    }
+
+    .cars-containt {
+        width: 100%;
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+ }
+
+ .car-card .car-info {
+     flex-direction: column;
+     justify-items: center;
+     align-items: center;
+     text-align: center;
+     gap: 10px;
+
+ }
+
+ .music-player {
+     position: fixed;
+     bottom: 20px;
+     right: 20px;
+     background: rgba(255, 255, 255, 0.8);
+     border-radius: 10px;
+     padding: 10px;
+     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+ }
+
+ .music-player audio {
+     width: 100px;
+ }
+
+.precio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.title-car{
+    width: 177px;
+    height: 31px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+.text-container{
+    margin-top: 20px;
+}
+.text{
+height: 31px;
+width: 177px;
+
+}
+
+
+/*se añade el CSS utilizado para service*/
+
+.order-summary {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    padding: 10px 0;
+}
+
+.order-box {
+    width: 216px;
+    height: 268px;
+    background: white;
+    border-radius: 10px;
+    padding: 16px;
+    text-align: center;
+    box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+}
+.container-order{
+    width: 590px;
+    height: 347px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+ 
+}
+.service-list{
+    padding-left: 10px;
+    width: 354px;
+    height: 268px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+
+.order-title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.order-time strong {
+    font-size: 20px;
+    color: #9b5de5;
+}
+
+.service-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.service-item {
+    background: white;
+    border-radius: 8px;
+    padding: 10px 14px;
+    display: flex;
+    justify-content: space-between;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.05);
+}
+
+.add-services-btn {
+    border: 2px dashed #ccc;
+    background: #f5f5f5;
+    border-radius: 8px;
+    padding: 10px;
+    cursor: pointer;
+    font-weight: bold;
+    color: #888;
+}
+
+.pay-btn {
+    background: #9b5de5;
+    color: white;
+    width: 590px;
+    height: 59px;
+    padding: 14px;
+    border: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.bottom-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+.info-card {
+    background: white;
+    flex: 1;
+    min-width: 180px;
+    max-width: 220px;
+    border-radius: 10px;
+    padding: 14px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+.info-title {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.info-desc {
+    font-size: 12px;
+    color: gray;
+}
+
+.info-bar {
+    margin-top: 8px;
+    width: 100%;
+    height: 6px;
+    background: #eee;
+    border-radius: 3px;
+}
+
+.bar-fill {
+    height: 100%;
+    width: 60%;
+    background: #9b5de5;
+    border-radius: 3px;
+}
+.bar-fill.green {
+    background: #43aa8b;
+}
+.bar-fill.red {
+    background: #f94144;
+}
+
+
+.right-panel {
+    display: flex;
+    flex-direction: column;
+    margin: 10px;
+    max-width: 100%;
+
+}
+
+.right-box {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    border-radius: 12px;
+    padding: 16px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.05);
+}
+
+.box-title {
+    font-weight: bold;
+    font-size: 16px;
+    margin-bottom: 12px;
+}
+
+/* Service Required */
+.service-required {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+.required-item {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+}
+
+.bullet {
+    width: 10px;
+    height: 40px;
+    border-radius: 5px;
+}
+
+.bullet.green {
+    background: #43aa8b;
+}
+.bullet.purple {
+    background: #9b5de5;
+}
+.bullet.red {
+    background: #f94144;
+}
+
+.required-info .service-name {
+    font-weight: 600;
+}
+
+.required-info .service-meta {
+    font-size: 12px;
+    color: gray;
+}
+
+/* Service Schedule */
+.schedule-item {
+    display: flex;
+    gap: 10px;
+    align-items: flex-start;
+    margin-bottom: 12px;
+}
+
+.radio {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    background: #9b5de5;
+    margin-top: 4px;
+}
+
+.radio.empty {
+    background: #e0e0e0;
+}
+
+.schedule-info p {
+    margin: 0;
+    font-size: 14px;
+}
+
+.schedule-meta {
+    font-size: 12px;
+    color: gray;
+}
+.main-columns {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-between;
+    align-items: flex-start;
+   
+}
+.station-status{
+    width: 350.76px;
+    height: 15.04px;
+    display: flex;
+    flex-direction: row;
+    margin-top: 10px;
+    margin-left: 120px;
+    justify-content: space-between;
+}

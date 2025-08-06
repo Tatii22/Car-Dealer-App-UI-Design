@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Caradver</title>
+  <link rel="stylesheet" href="/CSS/service.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+  <div class="layout">
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="/img/siderbar/logo.svg" alt="Logo" />
+        <span>caradver</span>
+      </div>
+      <div class="menu">
+        <button onclick="location.href='main.html'"><i class="fas fa-border-all"></i> <span>Dashboard</span></button>
+        <button onclick="location.href='assets.html'"><i class="fas fa-car"></i> <span>Assets</span></button>
+        <button onclick="location.href='Booking.html'"><i class="fas fa-calendar-check"></i> <span>Booking</span></button>
+        <button onclick="location.href='sellcars.html'"><i class="fas fa-dollar-sign"></i> <span>Sell Cars</span></button>
+        <button onclick="location.href='service.html'"><i class="fas fa-tools"></i> <span>Services</span></button>
+      </div>
+      <div class="footer">
+        <button onclick="location.href='settings.html'"><i class="fas fa-cog"></i> <span>Settings</span></button>
+        <button onclick="location.href='sign in.html'"><i class="fas fa-sign-out-alt"></i> <span>Log out</span></button>
+      </div>
+    </aside>
+
+    <div class="main-content">
+      <header class="topbar">
+        <div class="topbar-container">
+          <div class="topbar-left">
+            <i class="fas fa-bell notification"></i>
+            <div class="search-bar"><input type="text" placeholder="  or type..." /></div>
+          </div>
+          <button class="profile-btn" onclick="location.href='#perfil'"></button>
+        </div>
+      </header>
+
+      <div class="main-columns">
+        <section class="cars-containt">
+          <div class="text-container"><strong class="text">Service Station</strong></div><br />
+          <div class="cars">
+            <div class="car-card"><p>A1</p></div><div class="car-card"><p>A2</p></div><div class="car-card"><p>A3</p></div><div class="car-card"><p>A4</p></div><div class="car-card"><p>A5</p></div><div class="car-card"><p>A6</p></div><div class="car-card"><p>A7</p></div><div class="car-card"><p>A8</p></div><div class="car-card"><p>A9</p></div><div class="car-card"><p>A10</p></div><div class="car-card"><p>B1</p></div><div class="car-card"><p>B2</p></div><div class="car-card"><p>B3</p></div><div class="car-card"><p>B4</p></div><div class="car-card"><p>B5</p></div><div class="car-card"><p>B6</p></div><div class="car-card"><p>B7</p></div><div class="car-card"><p>B8</p></div><div class="car-card"><p>B9</p></div><div class="car-card"><p>B10</p></div>
+          </div>
+
+          <div class="station-status">
+            <div class="status-item"><span class="status-dot ready"></span> Ready</div>
+            <div class="status-item"><span class="status-dot booked"></span> Booked</div>
+            <div class="status-item"><span class="status-dot current"></span> Current Station</div>
+          </div>
+        <div class="container-order">
+          <div class="order-summary">
+            <div class="order-box">
+              <p class="order-title">Your Order</p>
+              <img src="/img/services/Frame 155.png" alt="status">
+            </div>
+
+            <div class="service-list">
+              <div class="service-item"><span>Brake fluid change</span><span>$32</span></div>
+              <div class="service-item"><span>Diagnostics</span><span>$32</span></div>
+              <div class="service-item"><span>External Washing</span><span>$10</span></div>
+              <button class="add-services-btn">Add Services</button>
+            </div>
+          </div>
+        </div>
+
+            <button class="pay-btn">Pay $86</button>
+            
+            <div class="bottom-cards">
+              <div class="info-card"><p class="info-title">Oil Level</p><p class="info-desc">Engine • Don’t Replace</p><div class="info-bar"><div class="bar-fill"></div></div></div>
+              <div class="info-card"><p class="info-title">Brake Pads</p><p class="info-desc">Wheels • Still Good</p><div class="info-bar"><div class="bar-fill green"></div></div></div>
+              <div class="info-card"><p class="info-title">Steering</p><p class="info-desc">Drivetrain • Need Change</p><div class="info-bar"><div class="bar-fill red"></div></div></div>
+            </div>
+          
+        </section>
+
+        <div class="right-panel">
+          <div class="right-box">
+            <p class="box-title">Service Required</p>
+            <div class="service-required">
+              <div class="required-item"><div class="bullet green"></div><div class="required-info"><p class="service-name">Center Care</p><p class="service-meta">Price: $48 · Processing: 1 hour</p></div></div>
+              <div class="required-item"><div class="bullet purple"></div><div class="required-info"><p class="service-name">Diagnostics</p><p class="service-meta">Price: $78 · Processing: 2 hours</p></div></div>
+              <div class="required-item"><div class="bullet red"></div><div class="required-info"><p class="service-name">Inner Cleaning</p><p class="service-meta">Price: $78 · Processing: 1 hour</p></div></div>
+            </div>
+          </div>
+
+          <div class="right-box">
+            <p class="box-title">Service Schedule</p>
+            <div class="schedule-item selected"><div class="radio"></div><div class="schedule-info"><p>Upgrade your favorite car periodically</p><p class="schedule-meta">Today, 10:00 · Fix Price: $1,200</p></div></div>
+            <div class="schedule-item"><div class="radio empty"></div><div class="schedule-info"><p>Buy spare parts for suspension</p><p class="schedule-meta">Today, 14:00 · Fix Price: $1,400</p></div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="music-player">
+    <audio autoplay controls loop>
+      <source src="/Sounds/Yofukashi no Uta Season 2 Opening Full _ Mirage - Sub. Español ♡.mp3" type="audio/mp3" />
+      Tu navegador no soporta audio HTML5.
+    </audio>
+  </div>
+</body>
+</html>
