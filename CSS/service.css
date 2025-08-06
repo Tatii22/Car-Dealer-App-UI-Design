@@ -227,6 +227,9 @@
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
+    align-items: center;
+    height: 347px;
+    width: 590px;
     max-width: 100%;
 }
 
@@ -234,8 +237,8 @@
      display: grid;
      grid-template-columns: repeat(10, 1fr);
      gap: 10px;
-     justify-items: center;
-      width: clamp(10%, 22vw, 590px);
+     justify-items: flex-start;
+
      height: clamp(50%, 16vw, 156px);
  }
 
@@ -282,7 +285,8 @@
     }
 
     .cars-containt {
-        width: 100%;
+        width: 590px;
+        height: 347px;
         margin-left: 10px;
         margin-right: 10px;
     }
@@ -425,9 +429,15 @@ width: 177px;
 }
 
 .bottom-cards {
+    width: 888px;
+    max-width: 1029.2px;
+    margin: 20px auto;
+    padding: 0 20px;
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
     gap: 16px;
+    margin-top: 20px;
 }
 
 .info-card {
@@ -476,13 +486,17 @@ width: 177px;
     display: flex;
     flex-direction: column;
     margin: 10px;
+    gap: 80px;
     max-width: 100%;
 
 }
 
 .right-box {
     display: flex;
+    height: 100%;
     flex-direction: column;
+    margin-top: 20px;
+    justify-content: flex-start;
     background: white;
     border-radius: 12px;
     padding: 16px;
@@ -563,10 +577,11 @@ width: 177px;
     color: gray;
 }
 .main-columns {
+    margin-left: 20px;
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
-    justify-content: space-between;
+    padding-left: 20%;
     align-items: flex-start;
    
 }

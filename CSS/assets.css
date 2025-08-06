@@ -232,8 +232,8 @@ header.topbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  max-width: 1043px ;
   margin-bottom: 20px;
-  margin-right: -60px;
 }
 
 .content {
