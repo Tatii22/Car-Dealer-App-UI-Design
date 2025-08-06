@@ -250,6 +250,7 @@ header.topbar {
 .car1 {
   border-radius: 15px;
 }
+
 .information-user {
   border-radius: 22px;
   border: 1px solid #ccc;
@@ -421,15 +422,138 @@ header.topbar {
   font-weight: 500;
   color: #222;
 }
+
 .card-imagens {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(2, auto); 
+  grid-template-rows: repeat(2, auto);
   gap: 15px;
   width: 82%;
 
 }
+
 .card-imagens img {
   border-radius: 3px;
   object-fit: cover;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .assets-content {
+    margin: 30px 20px;
+  }
+
+  .options-top {
+    flex-direction: row;
+    margin-right: 0;
+    gap: 10px;
+  }
+
+  .image-car {
+    width: 100%;
+    height: auto;
+  }
+
+  .car1 {
+    width: 100%;
+    height: auto;
+  }
+
+  .information-car {
+    flex-direction: column;
+  }
+
+  .information-user {
+    width: 100%;
+  }
+
+  .user {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .user2 .input-block {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 5px;
+  }
+
+
+  .input-block2 {
+    display: flex;
+    justify-content: end;
+    margin-left: 0px;
+    gap: 8px;
+  }
+
+  .contact-user {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1px;
+  }
+
+
+
+  .information-car1 {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .column {
+    flex: 1 1 100%;
+  }
+
+  .card-imagens {
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .assets-content {
+    margin: 20px 10px;
+  }
+
+  .options-top {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .information-user {
+    padding: 10px;
+  }
+
+  .user img {
+    width: 55px;
+    height: 55px;
+  }
+
+  .text-user h4 {
+    font-size: 18px;
+  }
+
+  .text-user p {
+    font-size: 12px;
+  }
+
+  .user2 .input-block {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .contact-user {
+    padding: 20px 15px;
+  }
+
+  .card-imagens {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+}
+.image-car {
+  height: 100%;
+  width: auto;
+}
 }
