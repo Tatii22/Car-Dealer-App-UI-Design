@@ -288,12 +288,11 @@ header.topbar {
   transform: translateY(-3px);
 }
 
-.car-card img {
-  width: 100%;
-  height: auto;
-  border-radius: 8px;
-  object-fit: cover;
-}
+ .car-card img {
+
+     border-radius: 8px;
+     object-fit: cover;
+ }
 
 @media (max-width: 950px) {
   .cars {
@@ -321,3 +320,33 @@ header.topbar {
 .music-player audio {
   width: 300px;
 }
+
+.precio{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    
+}
+
+.title-car{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: flex-start;
+}
+.car-left{
+    display: flex;
+    flex-direction: row;
+    align-items: center ;
+    justify-content: flex-start;
+    gap: 20px;
+   
+}
+.car-meta{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
