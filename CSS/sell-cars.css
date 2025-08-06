@@ -421,3 +421,103 @@ select {
   font-size: 18px;
   margin-bottom: 5px;
 }
+/* -------- responsive -------- */
+@media screen and (max-width: 991px) {
+  .sell-content {
+    margin: 40px 20px;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .carro {
+  overflow: hidden;
+}
+
+  .grafica {
+    width: 100%;
+    height: auto;
+  }
+
+  .estadisticas {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .btn-s {
+    padding-right: 0;
+    flex-wrap: wrap;
+  }
+
+  .text {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  .texto-gris2 {
+    font-size: 12px;
+  }
+}
+
+
+@media screen and (max-width: 600px) {
+  .sell-content {
+    margin: 20px 10px;
+    padding: 0;
+  }
+
+  .carro {
+    padding: 15px;
+  }
+
+  .grafica {
+    padding: 15px;
+  }
+
+  .estadisticas {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+  }
+  .info-user {
+    align-items: center;
+  }
+
+  .bar-container {
+    height: 150px;
+  }
+
+  .labels {
+    font-size: 10px;
+  }
+
+  .precio {
+    font-size: 18px;
+  }
+
+  .texto-gris {
+    font-size: 10px;
+  }
+
+  .text-datos h3 {
+    font-size: 16px;
+  }
+
+  .dato3 h3,
+  .dato4 h3,
+  .dato5 h3 {
+    font-size: 16px;
+  }
+
+  .btn-s {
+    flex-direction: column;
+
+    gap: 10px;
+    padding-right: 0;
+  }
+  .texto-gris2 {
+    font-size: 10px;
+  }
+}
