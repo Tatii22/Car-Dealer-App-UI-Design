@@ -418,3 +418,98 @@ header.topbar {
     border-color: #893091;
     outline: none;
 }
+/* ======= RESPONSIVE ======= */
+@media (max-width: 1024px) {
+    .settings-content {
+        margin: 30px 40px;
+        border-radius: 20px;
+    }
+
+    .content {
+        padding: 20px 30px;
+    }
+
+    .options-list {
+        gap: 40px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+    }
+
+    .input-block.full {
+        grid-column: span 1;
+    }
+
+    .yourphoto {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .frame {
+        justify-content: center;
+    }
+
+    .socialp {
+        flex-direction: column;
+    }
+
+    .inputs-social {
+        max-width: 100%;
+    }
+}
+
+/* === RESPONSIVE: CELULAR (≤768px) === */
+
+@media (max-width: 768px) {
+    .settings-content {
+        margin: 20px 15px;
+        border-radius: 15px;
+    }
+
+    .content {
+        padding: 15px 20px;
+    }
+
+    .options-list {
+        flex-direction: column;
+        gap: 20px;
+        align-items: center;
+    }
+
+    .profile h2 {
+        font-size: 20px;
+    }
+
+    .profile p {
+        font-size: 16px;
+    }
+
+    .row {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .yourphoto {
+        padding: 15px;
+        gap: 15px;
+    }
+
+    .frame {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .input-social {
+        padding: 10px 20px;
+    }
+
+    .btn-gris,
+    .btn-morado {
+        font-size: 14px;
+        padding: 8px 12px;
+    }
+}
